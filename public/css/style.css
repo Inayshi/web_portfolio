@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,800;0,9..144,900;1,9..144,500;1,9..144,700&display=swap');
+
+body {
+    background-color: #FDF3C0;
+    font-family: 'Fraunces', sans-serif;
+}
+
+.m-4 {
+    
+    font-family: 'Fraunces', sans-serif;
+    color: black;
+    font-weight: 800;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-light .navbar-nav .nav-link{
+  color: #FFA114 !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #193F56 !important;
+}
+
+.navbar-nav{
+  background-color: #FDF3C0;
+
+}
