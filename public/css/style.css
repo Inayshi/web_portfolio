@@ -1,36 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,800;0,9..144,900;1,9..144,500;1,9..144,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 body {
-    background-color: #FDF3C0;
-    font-family: 'Fraunces', sans-serif;
+    background-color: #C8C6BA;
+    font-family: "Urbanist", sans-serif;
 }
 
-.m-4 {
-    
-    font-family: 'Fraunces', sans-serif;
-    color: black;
-    font-weight: 800;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
-    margin-right: 20px;
-    padding: 15px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1000;
+.navbar {
+    padding: 20px;
+    color: #2C2929;
+    font-family: "Urbanist", sans-serif;
 }
 
-.navbar-light .navbar-nav .nav-link{
-  color: #FFA114 !important;
+.navbar a {
+    color: #2C2929;
+    font-size: 25px;
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
-  color: #193F56 !important;
+.navbar-nav {
+    margin-left: auto;
 }
 
-.navbar-nav{
-  background-color: #FDF3C0;
+
+.banner {
+    margin-top: 10%;
+    font-family: "Urbanist", sans-serif;
+}
+
+.banner h1 {
+    font-weight: bold;
+    font-size: 130px;
+    margin-bottom: -30px;
+}
+
+.banner h2 {
+    font-weight: bold;
+    font-size: 130px;    
+    margin-bottom: 15px;
+}
+.banner h3 {
+    font-size: 70px;
+    margin-bottom: -30px;
 
 }
+
+.banner h5 {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: -30px;
+}
+
+.nic-image {
+    max-width: 100%;
+    height: auto;
+    margin-left: 25%;
+    margin-top: -20%;
+}
+
+.links {
+    text-decoration: none;
+    list-style-type: none;
+    margin-top: -20%;
+}
+
+.links li {
+    color: inherit; 
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.resume {
+    margin-top: 11%;
+    background-color: #2C2929;
+    font-family: "Urbanist", sans-serif;
+    align-items: center;
+}
+
+.resume .row {
+   padding-left: 20%;
+}
+.resume h1 {
+    color: #C0F256;
+    padding: 10%;
+    font-weight: bold;
+}
+
