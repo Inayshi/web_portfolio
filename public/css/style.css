@@ -6,82 +6,892 @@ body {
     font-family: "Urbanist", sans-serif;
 }
 
-.navbar {
-    padding: 20px;
-    color: #2C2929;
-    font-family: "Urbanist", sans-serif;
+.body-container {
+    background-color: #2C2929;
+    padding: 0%;
+
 }
 
-.navbar a {
+.container {
+    justify-content: center;
+    padding-top: 30px;
+
+}
+
+/* Phone Size */
+.navbar {
     color: #2C2929;
+    font-family: "Urbanist", sans-serif;
+    padding-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1px !important;
+}
+
+.navbox {
+    text-align: center;
+    height: 50px; 
+    margin: 0 20px; 
+}
+
+
+.img-container {
+    margin: 10px, 10px, 0px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    
+}
+
+.img-container img {
+    max-width: 70%; 
+    max-height: 70%; 
+}
+
+
+.banner-container {
+    background-color: #C8C6BA;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "Urbanist", sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner-container h1 {
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: -20px;
+}
+
+.banner-container h2 {
+    font-weight: bold;
+    color: #CC0364;
+    font-size: 50px;
+
+}
+.banner-container h3 {
+    margin-bottom: -5px;
     font-size: 25px;
 }
 
-.navbar-nav {
-    margin-left: auto;
+.banner-container h5 {
+    font-size: 12px;
+    margin-top: 5px;
+
+}
+
+.banner-container span {
+    background-color: #C0F256;
+    font-weight: bold;
 }
 
 
-.banner {
-    margin-top: 10%;
+.resume-container {
+    background-color: #2C2929;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 0;
+    padding-right: 0;
     font-family: "Urbanist", sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.banner h1 {
-    font-weight: bold;
-    font-size: 130px;
-    margin-bottom: -30px;
-}
-
-.banner h2 {
-    font-weight: bold;
-    font-size: 130px;    
-    margin-bottom: 15px;
-}
-.banner h3 {
-    font-size: 70px;
-    margin-bottom: -30px;
+.resume-container h1 {
+    color: #C0F256;
+    padding-bottom: 50px;
+    padding-top: 30px;
 
 }
 
-.banner h5 {
-    font-size: 30px;
-    margin-top: 0;
-    margin-bottom: -30px;
+.resume-container h1 span {
+    background-color: #FF6230;
 }
 
-.nic-image {
-    max-width: 100%;
-    height: auto;
-    margin-left: 25%;
-    margin-top: -20%;
+.resume-container h2 {
+    font-size: 25px;
+    font-weight: medium;
+    color: #FF6230;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.resume-container p{
+    padding-top: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 12px;
+    color: #C8C6BA;
 }
 
 .links {
-    text-decoration: none;
-    list-style-type: none;
-    margin-top: -20%;
+    margin-top: -40px;
+    padding-bottom: 40px;
+    display: flex; 
+    justify-content: center; 
+}
+.links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex; 
 }
 
-.links li {
-    color: inherit; 
-    text-decoration: none;
-    margin-bottom: 10px;
+.links ul li {
+    margin-right: 5px; 
 }
 
-.resume {
-    margin-top: 11%;
-    background-color: #2C2929;
-    font-family: "Urbanist", sans-serif;
-    align-items: center;
+.links ul li svg {
+    width: 20px;
 }
 
-.resume .row {
-   padding-left: 20%;
+
+.links ul li:last-child {
+    margin-right: 0; 
 }
-.resume h1 {
-    color: #C0F256;
-    padding: 10%;
+
+.tools-container {
+    padding-bottom: 30px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5, 50px); 
+    gap: 5px; 
+}
+
+.box {
+    text-align: center;
+    margin-right: 5px;
+    width: 50px; 
+    height: 50px; 
+}
+
+.box img {
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain; 
+}
+
+.resume-container .company {
+    color: #C8C6BA;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 0px;
     font-weight: bold;
 }
 
+.works-container {
+    background-color: #2C2929;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-family: "Urbanist", sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.works-container h1 {
+    padding: 0px 0px 0px;
+}
+
+.works-container .dev{
+    color: #C8C6BA;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.works-container .dsgn{
+    color: #C8C6BA;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.works-container .dev span {
+    color: #2C2929;
+    background-color: #03CCA8;
+}
+
+.works-container .dsgn span {
+    color: #2C2929;
+    background-color: #C0F256;
+}
+
+.works-container .dev-proj {
+   color: #03CCA8;
+   padding-top: 15px;
+   font-size: 18px;
+   
+}
+
+.works-container .dsgn-proj {
+    padding-top: 15px;
+    color: #C0F256;
+    font-size: 18px;
+    
+ }
+
+.works-container p {
+    color: #C8C6BA;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.works-container .repo-btn {
+    background-color: #03CCA8;
+    color:#2C2929;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.works-container .cs-btn {
+    background-color: #C0F256;
+    color:#2C2929;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.contact-container {
+    background-color: #2C2929;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-family: "Urbanist", sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-container p {
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.contact-container p .green {
+    color: #C0F256
+}
+
+.contact-container p .pink {
+    color: #CC0364
+}
+
+.contact-container p .blue {
+    color: #03CCA8
+}
+
+.contact-container p .orange {
+    color: #FF6230
+}
+
+.contact-container h5 {
+    padding-top: 50px;
+    font-size: 15px;
+    color: #C8C6BA;
+}
+
+/* Tablet Size */
+@media only screen and (min-width: 768px) {
+
+    .navbar {
+        color: #2C2929;
+        font-family: "Urbanist", sans-serif;
+        font-size: 20px;
+        padding-bottom: 30px;
+        align-items: center;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 1px !important;
+    }
+    
+    .navbox {
+        text-align: center;
+        height: 50px; 
+        margin: 0 50px; 
+    }
+
+    .banner-container {
+        background-color: #C8C6BA;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-family: "Urbanist", sans-serif;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .banner-container h1 {
+        font-weight: bold;
+        font-size: 80px;
+        margin-bottom: -20px;
+    }
+    
+    .banner-container h2 {
+        font-weight: bold;
+        color: #CC0364;
+        font-size: 80px;
+    
+    }
+    .banner-container h3 {
+        margin-bottom: -5px;
+        font-size: 40px;
+    }
+    
+    .banner-container h5 {
+        font-size: 24px;
+        margin-top: -5px;
+    
+    }
+    
+
+    .resume-container {
+        background-color: #2C2929;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-family: "Urbanist", sans-serif;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .resume-container h1 {
+        font-size: 70px;
+        color: #C0F256;
+        padding-bottom: 50px;
+        padding-top: 30px;
+    
+    }
+    
+    .resume-container h1 span {
+        background-color: #FF6230;
+    }
+    
+    .resume-container h2 {
+        font-size: 40px;
+        font-weight: medium;
+        color: #FF6230;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    
+    .resume-container p{
+        padding-top: 5px;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 18px;
+        color: #C8C6BA;
+    }
+    
+    .links {
+        margin-top: -30px;
+        padding-bottom: 40px;
+        display: flex; 
+        justify-content: center; 
+    }
+    .links ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex; 
+    }
+    
+    .links ul li {
+        margin-right: 15px; 
+    }
+    
+    .links ul li:last-child {
+        margin-right: 0; 
+    }
+
+    .links ul li svg {
+        width: 30px;
+    }
+    
+    .tools-container {
+        padding-bottom: 30px;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(7, 50px); 
+        gap: 5px; 
+    }
+    
+    .box {
+        text-align: center;
+        margin-right: 5px;
+        width: 50px; 
+        height: 50px; 
+    }
+    
+    .box img {
+        max-width: 100%; 
+        max-height: 100%; 
+        object-fit: contain; 
+    }
+    
+    .resume-container .company {
+        color: #C8C6BA;
+        font-size: 20px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+        font-weight: bold;
+    }
+
+    .works-container {
+        background-color: #2C2929;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+        font-family: "Urbanist", sans-serif;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .works-container h1 {
+        padding: 0px 0px 0px;
+    }
+    
+    .works-container .dev{
+        color: #C8C6BA;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    
+    
+    .works-container .dsgn{
+        color: #C8C6BA;
+        padding-top: 50px;
+        padding-bottom: 10px;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    
+    .works-container .dev span {
+        color: #2C2929;
+        background-color: #03CCA8;
+    }
+    
+    .works-container .dsgn span {
+        color: #2C2929;
+        background-color: #C0F256;
+    }
+    
+    .works-container .dev-proj {
+       color: #03CCA8;
+       padding-top: 15px;
+       font-size: 25px;
+       
+    }
+    
+    .works-container .dsgn-proj {
+        padding-top: 15px;
+        color: #C0F256;
+        font-size: 25px;
+        
+     }
+    
+    .works-container p {
+        color: #C8C6BA;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    
+    .works-container .repo-btn {
+        background-color: #03CCA8;
+        color:#2C2929;
+        padding: 5px;
+        font-size: 15px;
+    }
+    
+    .works-container .cs-btn {
+        background-color: #C0F256;
+        color:#2C2929;
+        padding: 5px;
+        font-size: 15px;
+    }
+    
+    .contact-container {
+        background-color: #2C2929;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+        font-family: "Urbanist", sans-serif;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .contact-container p {
+        font-size: 40px;
+        line-height: 35px;
+    }
+    
+    .contact-container p .green {
+        color: #C0F256
+    }
+    
+    .contact-container p .pink {
+        color: #CC0364
+    }
+    
+    .contact-container p .blue {
+        color: #03CCA8
+    }
+    
+    .contact-container p .orange {
+        color: #FF6230
+    }
+    
+    .contact-container h5 {
+        padding-top: 50px;
+        font-size: 20px;
+        color: #C8C6BA;
+    }
+}
+
+/* Computer Size */
+@media only screen and (min-width: 1000px) {
+
+
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        background-color: #C8C6BA;
+        font-family: "Urbanist", sans-serif;
+    }
+    
+    .body-container {
+        background-color: #2C2929;
+        padding: 0px;
+    
+    }
+    
+    .container {
+        padding-top: 30px;
+    
+    }
+
+    .navbar {
+        color: #2C2929;
+        font-family: "Urbanist", sans-serif;
+        font-size: 20px;
+        margin-top: 5%;
+        padding: 5px 10px 0px;
+        align-items: center;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 1px !important;
+    }
+    
+    .navbox {
+        text-align: center;
+        height: 50px; 
+        margin: 0 110px; 
+    }
+
+    .banner {
+        padding: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+
+
+    }
+
+    .img-container {
+        margin-right: 45%;
+        display: flex;
+        margin-bottom: 10%;
+        
+    }
+    
+    .img-container img {
+        max-width: 90%; 
+        max-height: 90%; 
+    }
+    
+    
+    .banner-container {
+        text-align: justify;
+        padding-bottom: 40px;
+        margin-left: 55%;
+        margin-top: -60%;
+        margin-bottom: 10%;
+        background-color: #C8C6BA;
+        font-family: "Urbanist", sans-serif;
+    }
+    
+    .banner-container h1 {
+        font-weight: bold;
+        font-size: 70px;
+        margin-bottom: -30px;
+    }
+    
+    .banner-container h2 {
+        font-weight: bold;
+        color: #CC0364;
+        font-size: 100px;
+    
+    }
+    .banner-container h3 {
+        margin-bottom: -10px;
+        font-size: 35px;
+    }
+    
+    .banner-container h5 {
+        font-size: 20px;
+        margin-top: -5px;
+    
+    }
+    
+    .banner-container span {
+        background-color: #C0F256;
+        font-weight: bold;
+    }
+    
+    
+    .resume-container {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: #2C2929;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        font-family: "Urbanist", sans-serif;
+      
+    }
+    
+    .resume-container h1 {
+        font-size: 80px;
+        text-align: center;
+        color: #C0F256;
+        padding-bottom: 50px;
+        padding-top: 10%;
+      
+    
+    }
+    
+    .resume-container h1 span {
+        background-color: #FF6230;
+    }
+    
+    .resume-container h2 {
+        font-size: 40px;
+        font-weight: medium;
+        color: #FF6230;
+        padding: 10px 30px 0px;
+    }
+    
+    .resume-container p{
+        padding-top: 10px 5px 0px;
+        font-size: 16px;
+        color: #C8C6BA;
+    }
+
+    .resume-grid {
+        text-align: justify;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+        
+    }
+    
+    .summary, .skills, .experience, .affiliations {
+        padding: 10px;
+    }
+
+    .links {
+        margin-top: -30px;
+        padding-bottom: 40px;
+        display: flex; 
+        justify-content: center; 
+    }
+    .links ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex; 
+    }
+    
+    .links ul li {
+        margin-right: 20px; 
+    }
+
+    .links ul li svg {
+        width: 40px;
+    }
+    
+    .links ul li:last-child {
+        margin-right: 0; 
+    }
+    
+    .tools-container {
+        padding: 10px 30px 0px;
+        margin-left: -12%;
+        display: grid;
+        grid-template-columns: repeat(6, 50px); 
+        gap: 5px; 
+    }
+    
+    .box {
+        margin-right: 5px;
+        width: 50px; 
+        height: 50px; 
+    }
+    
+    .box img {
+        max-width: 100%; 
+        max-height: 100%; 
+        object-fit: contain; 
+    }
+    
+ 
+
+    .resume-container .company {
+        color: #C8C6BA;
+        font-size: 18px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+        font-weight: bold;
+    }
+    
+    .works-container {
+        background-color: #2C2929;
+        padding: 10px 30px 0px;
+        font-family: "Urbanist", sans-serif;
+        text-align: justify;
+    }
+    
+    .works-container h1 {
+        padding: 15px 0px 0px;
+    }
+    .works-container .dev{
+        text-align: justify;
+        width: 100%;
+        color: #C8C6BA;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    
+    
+    .works-container .dsgn{
+        text-align: justify;
+        width: 100%;
+        color: #C8C6BA;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    
+    .works-container .dev span {
+        color: #2C2929;
+        background-color: #03CCA8;
+    }
+    
+    .works-container .dsgn span {
+        color: #2C2929;
+        background-color: #C0F256;
+    }
+    
+    .works-container .dev-proj {
+       color: #03CCA8;
+       font-size: 25px;
+       padding: 20px 0px 0px;
+
+       
+    }
+    
+    .works-container .dsgn-proj {
+        color: #C0F256;
+        font-size: 25px;
+        padding: 20px 0px 0px;
+
+        
+     }
+    
+    .works-container p {
+        color: #C8C6BA;
+        font-size: 18px;
+        line-height: 20px;
+        padding: 20px 0px 0px;
+    }
+    
+    .works-container .repo-btn {
+        background-color: #03CCA8;
+        color:#2C2929;
+        padding: 5px;
+        font-size: 15px;
+    }
+    
+    .works-container .cs-btn {
+        background-color: #C0F256;
+        color:#2C2929;
+        padding: 5px;
+        font-size: 15px;
+    }
+    
+    .contact-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        text-align: justify;
+    }
+    
+    .contact-info {
+        font-size: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contact-info p {
+        margin: 0;
+    }
+    
+    .contact-details h5 {
+        margin: 0;
+    }
+    
+    
+    .contact-container p .green {
+        color: #C0F256
+    }
+    
+    .contact-container p .pink {
+        color: #CC0364
+    }
+    
+    .contact-container p .blue {
+        color: #03CCA8
+    }
+    
+    .contact-container p .orange {
+        color: #FF6230
+    }
+    
+    .contact-container h5 {
+        padding-top: 50px;
+        font-size: 15px;
+        color: #C8C6BA;
+    }
+}
