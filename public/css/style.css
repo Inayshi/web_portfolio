@@ -4,6 +4,7 @@
 body {
     background-color: #C8C6BA;
     font-family: "Urbanist", sans-serif;
+    
 }
 
 .body-container {
@@ -596,15 +597,12 @@ body {
         font-size: 20px;
         margin-top: 5%;
         padding: 5px 10px 0px;
-        align-items: center;
-        justify-content: center;
         display: grid;
         grid-template-columns: repeat(3, 1fr); 
         gap: 1px !important;
     }
     
     .navbox {
-        text-align: center;
         height: 50px; 
         margin: 0 110px; 
     }
@@ -749,10 +747,10 @@ body {
     
     .tools-container {
         padding: 10px 30px 0px;
-        margin-left: -12%;
         display: grid;
-        grid-template-columns: repeat(6, 50px); 
+        grid-template-columns: repeat(8, 50px); 
         gap: 5px; 
+        justify-items: start;
     }
     
     .box {
@@ -893,5 +891,17 @@ body {
         padding-top: 50px;
         font-size: 15px;
         color: #C8C6BA;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .tools-container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-right: 25%;
+        display: grid;
+        grid-template-columns: repeat(8, 50px); 
+        gap: 5px; 
+        justify-items: start;
     }
 }
