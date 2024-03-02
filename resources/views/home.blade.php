@@ -14,19 +14,9 @@
 <body style="background-color: #C8C6BA;
 ;">
 
-<div class="container">
-<div class="navbar">
-    <div class="navbox">
-    <a> About </a>
-    </div>
-    <div class="navbox">
-    <a> Projects </a>
-    </div>
-    <div class="navbox">
-    <a> Contact </a>
-    </div>
-</div>
+@include('navbar')
 
+<div class="container">
 <div class="banner">
 <div class="img-container">
       <img src="{{ asset('images/nic.png') }}" alt="me">
@@ -155,7 +145,7 @@
 </div>
 
 <div class="works-container">
-  <h1 class="dev"> My <span> Development </span> Projects <h1>
+  <h1 class="dev"> My <span>Development</span> Projects <h1>
 
   <h3 class="dev-proj"> Aquatech: IoT System for Fish Farms </h3>
   <p> I lead this project as the project manager and lead programmer as partial fulfillment of the requirements for the degree of Bachelor of Science in Information Technology, wherein I designed an IoT system for Fish Farms using a microcontroller and Flutter and Firebase for the application development. </p>

@@ -21,9 +21,12 @@ body {
 
 /* Phone Size */
 .navbar {
+    position: fixed;
+    width: 100%;
+    background-color: #C8C6BA; 
     color: #2C2929;
     font-family: "Urbanist", sans-serif;
-    padding-bottom: 30px;
+    padding-bottom: 0;
     align-items: center;
     justify-content: center;
     display: grid;
@@ -33,10 +36,9 @@ body {
 
 .navbox {
     text-align: center;
-    height: 50px; 
+    height: 30px; 
     margin: 0 20px; 
 }
-
 
 .img-container {
     margin: 10px, 10px, 0px;
@@ -305,6 +307,9 @@ body {
 @media only screen and (min-width: 768px) {
 
     .navbar {
+        position: fixed;
+        width: 100%;
+        background-color: #C8C6BA;
         color: #2C2929;
         font-family: "Urbanist", sans-serif;
         font-size: 20px;
@@ -318,7 +323,9 @@ body {
     
     .navbox {
         text-align: center;
-        height: 50px; 
+        padding-top: 10px; 
+        padding-bottom: 5px;
+        height: 10px; 
         margin: 0 50px; 
     }
 
@@ -592,18 +599,21 @@ body {
     }
 
     .navbar {
+        position: fixed;
+        width: 100%;
+        background-color: #C8C6BA;
         color: #2C2929;
         font-family: "Urbanist", sans-serif;
         font-size: 20px;
-        margin-top: 5%;
-        padding: 5px 10px 0px;
         display: grid;
         grid-template-columns: repeat(3, 1fr); 
         gap: 1px !important;
     }
     
     .navbox {
-        height: 50px; 
+        height: 20px;
+        padding-top: 10px; 
+        padding-bottom: 5px;
         margin: 0 110px; 
     }
 
