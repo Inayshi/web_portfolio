@@ -14,9 +14,10 @@
             margin-top: 10%;
             padding-right: 30px;
             padding-left: 30px;
+            background-color: #2C2929;
         }
         .shadow-container {
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px #20201F;
             padding: 20px;
             margin-top: 10px;
         }
@@ -25,6 +26,31 @@
         }
         .container-fluid {
             padding-bottom: 50px;
+            background-color: #2C2929;
+        }
+
+        .form-control {
+            background-color: #2C2929;
+        }
+
+        label {
+            color: #C8C6BA;
+        }
+        h2 {
+            color: #C8C6BA;
+        }
+
+        h1 {
+            color: #C8C6BA;
+        }
+
+        input {
+            color: #C8C6BA;
+        }
+
+        ::placeholder {
+            color: #C8C6BA !important;
+            opacity: 1;
         }
     </style>
     <title>CMS</title>
@@ -33,7 +59,7 @@
 <body>
     <div class="container-fluid">
         <div class="row justify-content-center">
-        <h1> Resume </h1>
+        <h1 id="resume"> Resume </h1>
             <div class="col-md-12"> <!-- Adjusted to col-md-12 to take up the entire row -->
                 <div class="shadow-container">
                     <form>
@@ -103,7 +129,7 @@
 
         <div class="container-fluid">
             <div class="row justify-content-center">
-            <h1> Projects </h1>
+            <h1 id="projects"> Projects </h1>
                 <div class="col-md-12">
                     <div class="shadow-container">
                         <form>
@@ -139,7 +165,7 @@
         </div>
         <div class="container-fluid">
             <div class="row justify-content-center">
-            <h1> Projects </h1>
+            <h1 id="bookings"> Bookings </h1>
                 <div class="col-md-12">
                     <div class="shadow-container">
                         
