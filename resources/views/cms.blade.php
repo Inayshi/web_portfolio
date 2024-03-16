@@ -106,8 +106,9 @@
             </div>
             <div class="col-md-6">
                 <div class="shadow-container">
-                    <form>
+                    <form action="/experiences" method="POST">
                         <h2>Experiences</h2>
+                        @csrf
                         <div class="form-group">
                             <label for="experiences">Company</label>
                             <textarea class="form-control" id="company" rows="1" placeholder="Enter Company Name"></textarea>
@@ -115,7 +116,7 @@
                             <textarea class="form-control" id="position" rows="1" placeholder="Enter Position"></textarea>
                             <label for="experiences">Date</label>
                             <textarea class="form-control" id="date" rows="1" placeholder="Enter date started and ended"></textarea>
-                            <button type="button" class="btn btn-light px-3" style="font-family: 'Urbanist', sans-serif; font-weight: bold; background-color: #C8C6BA; padding: 3px;">Add</button>
+                            <button type="submit" class="btn btn-light px-3" style="font-family: 'Urbanist', sans-serif; font-weight: bold; background-color: #C8C6BA; padding: 3px;">Add</button>
 
                         </div>
                     </form>

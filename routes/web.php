@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\SummaryController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,6 @@ Route::get('/', function () {
 });
 
 Route::get('/cms', [SummaryController::class, 'index'])->name('cms');
+Route::post('/experiences', [ExperienceController::class, 'store']);
+Route::put('/experiences/{id}', [ExperienceController::class, 'update']);
+Route::delete('/experiences/{id}', [ExperienceController::class, 'destroy']);
