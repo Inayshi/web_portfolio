@@ -9,13 +9,13 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create('tools', function (Blueprint $table) {
+        Schema::create('affiliations', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('image_path');
-            $table->enum('category', ['developer', 'designer']);
+            $table->text('organization');
+            $table->text('position');
+            $table->text('date');
             $table->timestamps();
         });
     }
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tools');
+        Schema::dropIfExists('affiliations');
     }
 };

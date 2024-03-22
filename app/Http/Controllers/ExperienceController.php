@@ -3,43 +3,58 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Experience;
+use App\Models\ExperienceModel;
+use App\Models\Summary;
+use App\Models\Affiliation;
+
 
 class ExperienceController extends Controller
 {
     public function index()
     {
-        $experiences = Experience::all();
-        return view('experiences.index', compact('experiences'));
+        // Fetch all experiences from the database using the ExperienceModel
+        
+        $summaries = Summary::all();
+        $experiences = ExperienceModel::all();
+        $affiliations = Affiliation::all();
+    
+        return view('cms', compact('summaries', 'experiences', 'affiliations'));
     }
+
 
     public function store(Request $request)
     {
-        $experience = new Experience();
-        $experience->company = $request->input('company');
-        $experience->position = $request->input('position');
-        $experience->date = $request->input('date');
-        $experience->save();
+        $request->validate([
+            'company' => 'required|string',
+            'role' => 'required|string',
+            'date' => 'required|string',
+        ]);
 
-        return redirect('/experiences');
+        ExperienceModel::create($request->all());
+
+        return redirect()->back()->with('success', 'Experience created successfully!');
     }
 
     public function update(Request $request, $id)
     {
-        $experience = Experience::findOrFail($id);
-        $experience->company = $request->input('company');
-        $experience->position = $request->input('position');
-        $experience->date = $request->input('date');
-        $experience->save();
+        $request->validate([
+            'company' => 'required|string',
+            'role' => 'required|string',
+            'date' => 'required|string',
+        ]);
 
-        return redirect('/experiences');
+        $experience = ExperienceModel::findOrFail($id);
+        $experience->update($request->all());
+
+        return redirect()->back()->with('success', 'Experience updated successfully!');
     }
 
     public function destroy($id)
     {
-        $experience = Experience::findOrFail($id);
+        $experience = ExperienceModel::findOrFail($id);
         $experience->delete();
-        
-        return redirect('/experiences');
+
+        return redirect()->back()->with('success', 'Experience deleted successfully!');
     }
+
 }

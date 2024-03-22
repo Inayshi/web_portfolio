@@ -64,26 +64,23 @@
 
   <div class="summary">
     <h2> Summary </h2>
-    <p>
-    I am motivated designer and developer with a versatile skill set, excelling in UI/UX design, experienced in front-end development, I also extend my capabilities to mobile app development and IoT projects with  Arduino. Complementing my technical proficiency, I bring strong decision-making skills and thrive in collaborative environments as a student leader, adept at effective communication and eager to contribute to challenging projects, I am a committed team player with a knack for excellence in both technical and interpersonal aspects.
-    </p>
+    @foreach ($summaries as $summary)
+      <p style="color: #C8C6BA; line-height: 22px;">{{ $summary->content }}</p>
+    @endforeach
   </div>
 
   
 <div class="experience">
   <h2> Experience </h2>
 
-  <p> 
-  <span class="company"> Zamboanga City Hall - Computer Division </span>
-  <br> Sofware Development Intern 
-  <br> Present
-  </p>
-
-  <p> 
-  <span class="company"> Symph Co. </span>
-  <br> UI/UX Design Intern 
-  <br> Present
-  </p>
+  @foreach ($experiences as $experience)
+    <p>
+        <span class="company">{{ $experience->company }}</span>
+        <br>{{ $experience->role }}
+        <br>{{ $experience->date }}
+    </p>
+  @endforeach
+  
 </div>
 
 <div class="skills">
@@ -130,17 +127,13 @@
 <div class="affiliations">
     <h2> Affiliations </h2>
 
-    <p> 
-    <span class="company"> Google Developer Student Clubs Crimsons </span>
-    <br> CEO and Lead 
-    <br> Present
+    @foreach ($affiliations as $affiliation)
+    <p>
+        <span class="company">{{ $affiliation->organization }}</span>
+        <br>{{ $affiliation->position }}
+        <br>{{ $affiliation->date }}
     </p>
-
-    <p> 
-    <span class="company"> The Venom Publication </span>
-    <br> Editorial Consultant 
-    <br> Present
-    </p>
+  @endforeach
 </div>
 </div>
 

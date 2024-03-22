@@ -93,80 +93,104 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
         <h1 id="resume"> Resume </h1>
-            <div class="col-md-12"> <!-- Adjusted to col-md-12 to take up the entire row -->
-                <div class="shadow-container">
-                    <form>
-                        <div class="form-group">
-                            <label for="summary">Summary</label>
-                            <input type="text" class="form-control" id="summary" placeholder="Enter Summary">
-                            <button type="button" class="btn btn-light px-3" style="font-family: 'Urbanist', sans-serif; font-weight: bold; background-color: #C8C6BA; padding-top: 3px;">Save</button>
-                        </div>
-                    </form>
-                </div>
+            <div class="col-md-12"> 
+            <!-- Summary -->
+            <div class="shadow-container">
+            <form id="summaryForm" action="{{ route('summary.store') }}" method="POST">
+                    @csrf 
+                    <div class="form-group">
+                    <h2> Summary </h2>
+                        @foreach ($summaries as $summary)
+                            <p style="color: #C8C6BA; line-height: 18px; text-align: justify;">{{ $summary->content }}</p>
+                        @endforeach
+                        <input type="text" class="form-control" id="summaryInput" name="content" placeholder="Enter Summary">
+                        <button type="submit" class="btn btn-light px-3" style="font-family: 'Urbanist', sans-serif; font-weight: bold; background-color: #C8C6BA; padding-top: 3px;">Save</button>
+                    </div>
+                </form>
+            </div>
+
             </div>
             <div class="col-md-6">
+                <!-- Experiences -->
                 <div class="shadow-container">
-                    <form action="/experiences" method="POST">
+                    <form action="{{ route('experiences.store') }}" method="POST">
                         <h2>Experiences</h2>
                         @csrf
-                        <div class="form-group">
-                            <label for="experiences">Company</label>
-                            <textarea class="form-control" id="company" rows="1" placeholder="Enter Company Name"></textarea>
-                            <label for="experiences">Position</label>
-                            <textarea class="form-control" id="position" rows="1" placeholder="Enter Position"></textarea>
-                            <label for="experiences">Date</label>
-                            <textarea class="form-control" id="date" rows="1" placeholder="Enter date started and ended"></textarea>
-                            <button type="submit" class="btn btn-light px-3" style="font-family: 'Urbanist', sans-serif; font-weight: bold; background-color: #C8C6BA; padding: 3px;">Add</button>
-
-                        </div>
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input type="text" class="form-control" id="company" name="company" placeholder="Enter Company Name">
+                                
+                                <label for="role">Position</label>
+                                <input type="text" class="form-control" id="role" name="role" placeholder="Enter Position">
+                                
+                                <label for="date">Date</label>
+                                <input type="text" class="form-control" id="date" name="date" placeholder="Enter date started and ended">
+                                
+                                <button type="submit" class="btn btn-light px-3" style="font-family: 'Urbanist', sans-serif; font-weight: bold; background-color: #C8C6BA; padding: 3px;">Add</button>
+                            </div>
                     </form>
                     <hr>
                     <div class="experience-container">
+                        @foreach($experiences as $experience)
                         <div class="experience-text">
                             <p>
-                                Zamboanga City Hall - Computer Services Division<br>
-                                Software Development Intern<br>
-                                February - March 2024
+                                {{ $experience->company }}<br>
+                                {{ $experience->role }}<br>
+                                {{ $experience->date }}
                             </p>
                         </div>
                         <div class="experience-buttons">
-                            <button type="button" class="btn btn-warning px-1"><i class="fas fa-edit" aria-hidden="true"></i></button>
-                            <button type="button" class="btn btn-danger px-1"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
+                            <a href="{{ route('experiences.edit', $experience->id) }}" class="btn btn-warning px-1"><i class="fas fa-edit" aria-hidden="true"></i></a>
+                            <form action="{{ route('experiences.destroy', $experience->id) }}" method="POST" class="d-inline">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger px-1"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
+                            </form>
                         </div>
+                        @endforeach
                     </div>
                     <hr>
                 </div>
+                <!-- Affiliations -->
                 <div class="shadow-container">
-                    <form>
-                        <h2>Affiliations</h2>
-                        <div class="form-group">
-                        <label for="experiences">Organization</label>
-                            <textarea class="form-control" id="company" rows="1" placeholder="Enter Company Name"></textarea>
-                            <label for="experiences">Position</label>
-                            <textarea class="form-control" id="position" rows="1" placeholder="Enter Position"></textarea>
-                            <label for="experiences">Date</label>
-                            <textarea class="form-control" id="date" rows="1" placeholder="Enter date started and ended"></textarea>
-                            <button type="button" class="btn btn-light px-3" style="font-family: 'Urbanist', sans-serif; font-weight: bold; background-color: #C8C6BA; padding: 3px;">Add</button>
-
-                        </div>
-                    </form>
+                <form action="{{ route('affiliations.store') }}" method="POST">
+                    <h2>Affiliations</h2>
+                    @csrf
+                    <div class="form-group">
+                        <label for="company">Organization</label>
+                        <textarea class="form-control" id="company" name="organization" rows="1" placeholder="Enter Company Name"></textarea>
+                        <label for="position">Position</label>
+                        <textarea class="form-control" id="position" name="position" rows="1" placeholder="Enter Position"></textarea>
+                        <label for="date">Date</label>
+                        <textarea class="form-control" id="date" name="date" rows="1" placeholder="Enter date started and ended"></textarea>                        
+                        <button type="submit" class="btn btn-light px-3" style="font-family: 'Urbanist', sans-serif; font-weight: bold; background-color: #C8C6BA; padding: 3px;">Add</button>
+                    </div>
+                </form>
                     <hr>
                     <div class="experience-container">
+                    @foreach($affiliations as $affiliation)
                         <div class="experience-text">
-                            <p>
-                                Google Developer Student Clubs Crimsons<br>
-                                CEO and Lead<br>
-                                August 2023 - July 2024
-                            </p>
+                        <p>
+                            {{ $affiliation->organization }}<br>
+                            {{ $affiliation->position }}<br>
+                            {{ $affiliation->date }}
+                        </p>
                         </div>
                         <div class="experience-buttons">
-                            <button type="button" class="btn btn-warning px-1"><i class="fas fa-edit" aria-hidden="true"></i></button>
-                            <button type="button" class="btn btn-danger px-1"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
+                            <a href="{{ route('affiliations.edit', $affiliation->id) }}" class="btn btn-warning px-1"><i class="fas fa-edit" aria-hidden="true"></i></a>
+                            <form action="{{ route('affiliations.destroy', $affiliation->id) }}" method="POST" class="d-inline">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger px-1"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
+                            </form>                        
                         </div>
+                        @endforeach
+
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
+                <!-- Social Links -->
             <div class="shadow-container">
                     <form>
                     <h2>Social Links</h2>
@@ -188,6 +212,7 @@
                         
                     </form>
                 </div>
+                <!-- Tools -->
                 <div class="shadow-container">
                     <form>
                         <h2>Tools</h2>
@@ -199,6 +224,7 @@
         </div>
         <div> 
 
+        <!-- Projects -->
         <div class="container-fluid">
             <div class="row justify-content-center">
             <h1 id="projects"> Projects </h1>
@@ -237,17 +263,11 @@
                 
             </div>
         </div>
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-            <h1 id="bookings"> Bookings </h1>
-                <div class="col-md-12">
-                    <div class="shadow-container">
-                        
-                    </div>               
-                </div>
-            </div>
-        </div>
+       
         </div>
     </div>
+
+
 </body>
 </html>
+
